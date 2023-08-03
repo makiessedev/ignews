@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { SignInButton } from './SignInButton'
 
 export function Header () {
   return (
@@ -16,6 +17,7 @@ export function Header () {
             </Link>
             <Link href='posts' className='inline-block relative px-2 h-20 leading-[5rem] text-gray-300 hover:text-white-50 transition ml-8'>Posts</Link>
           </nav>
+          <SignInButton />
         </div>
       </header>
     </>
