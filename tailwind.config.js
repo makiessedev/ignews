@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: 'var(--font-roboto)'
+        roboto: ['var(--font-roboto)', 'sans-serif'],
       },
 
       colors: {
