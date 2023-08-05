@@ -33,7 +33,7 @@ Abaixo as tecnologias utilizadas para construção da aplicação
 - [ReactJS](https://reactjs.org/)
 - [NextJS](https://nextjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
-- [TAILWINDCSS](https://tailwindcss.com/)
+- [TailwindCSS](https://tailwindcss.com/)
 - [Next-Auth](https://next-auth.js.org/)
 - [Stripe](https://stripe.com/)
 - [FaunaDB](https://fauna.com/)
