@@ -1,8 +1,4 @@
-interface ButtonProps {
-  priceId: string
-}
-
-export function SubscribeButton(props: ButtonProps) {
+export function SubscribeButton() {
   return (
     <button
       type="button"

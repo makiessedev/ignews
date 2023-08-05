@@ -1,34 +1,103 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center">
+  <img alt="Logo" src="./public/logo.svg" alt="ig.News">
+</h1>
 
-## Getting Started
+<h1 align="center">
+    ig.News - Next.js 13
+</h1>
+<p align="center">Aplicação para inscrição de newsletter com pagamento via stripe</p>
 
-First, run the development server:
+
+<p align="center">
+ <a href="#sobre-o-projeto">Sobre o Projeto</a> •
+ <a href="#tecnologias">Tecnologias</a> •
+ <a href="#configurações-necessárias">Configurações necessárias</a> •
+ <a href="#licença">Licença</a> •
+ <a href="#autor">Autor</a>
+</p>
+
+## Sobre o projeto
+
+O projeto tem como objetivo o estudo e desenvolvimento de uma aplicação em ReactJS com NextJS para listagem de posts e sistema de inscrição(subscription).
+
+A aplicação foi desenvolvida utilizando o framework NextJS.13 aplicando conceitos como consumo de API externas, API Root, STRIPE para pagamentos das subscriptions, NextAuth para autenticação com Github, FaunaDB para armazenar as informações do usuário em um banco de dados e Prismic CMS para adição e gerenciamento do conteúdo dos posts.
+
+O projeto foi desenvolvido como pratica das aulas do modulo 03 do [Ignite da Rocketseat](https://rocketseat.com.br/)
+
+---
+
+## Tecnologias
+
+Abaixo as tecnologias utilizadas para construção da aplicação
+
+- [ReactJS](https://reactjs.org/)
+- [NextJS](https://nextjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [TAILWINDCSS](https://tailwindcss.com/)
+- [Next-Auth](https://next-auth.js.org/)
+- [Stripe](https://stripe.com/)
+- [FaunaDB](https://fauna.com/)
+- [Prismic CMS](https://prismic.io/)
+
+---
+
+## Configurações necessárias
+
+### **Requisitos**
+
+Necessário realizar as instalações:
+
+- [Git](https://git-scm.com/)
+- [Yarn](https://classic.yarnpkg.com)
+- [Stripe CLI](https://stripe.com/docs/stripe-cli)
+
+Criar conta e configurar os serviços externos:
+
+- [Stripe](https://stripe.com/)
+- [FaunaDB](https://fauna.com/)
+- [Prismic CMS](https://prismic.io/)
+
+*Configurações dos serviços estão localizadas no arquivo servicesConfig.md na raiz do projeto.*
+
+### **Clone do projeto**
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+# Execute o comando git clone para realizar o clone do repositório
+$ git clone https://github.com/nelsonsantosaraujo/ignews.git
+# Entre na pasta do repositório clonado
+$ cd ignews
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### **Iniciando o projeto**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# Execute yarn para instalar as dependências
+$ yarn
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+# Na raiz do projeto crie uma copia do arquivo .env.local.example
+# Altere o nome da copia para .env.local
+# Preencha as variáveis ambiente de acordo com as instruções
+$ cp .env.local.example .env.local
 
-## Learn More
+# Execute stripe listen para ouvir eventos do webhook
+$ stripe listen --forward-to localhost:3000/api/webhooks 
 
-To learn more about Next.js, take a look at the following resources:
+# Para iniciar a aplicação
+$ yarn dev
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## Licença
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Distribuído sob a licença MIT. Veja [LICENSE](LICENSE) para mais informações.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+---
+
+## Autor
+
+Feito por Makiesse Morais 👋🏽 Entre em contato!
+
+[![Linkedin Badge](https://img.shields.io/badge/-Makiesse-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/makiesse/)](https://www.linkedin.com/in/makiesse/)
+[![Gmail Badge](https://img.shields.io/badge/-makiesse.dev@gmail.com-red?style=flat-square&link=mailto:makiesse.dev@gmail.com)](mailto:makiesse.dev@gmail.com)
