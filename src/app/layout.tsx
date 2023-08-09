@@ -30,7 +30,7 @@ export default function RootLayout({
       <body className={`${roboto.variable} font-roboto bg-gray-900 text-white-50`}>
         <NextAuthProvider>
           <Header/>
-          {children}
+        {children}
         </NextAuthProvider>
       </body>
     </html>

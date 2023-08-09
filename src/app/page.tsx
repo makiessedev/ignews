@@ -16,7 +16,6 @@ export default async function Home() {
         </h1>
         <p className="text-2xl mt-6">
           Get access to all the publications <br />
-          {/* @ts-expect-error Async Server Coponent */}
           <Price />
         </p>
         <SubscribeButton />
