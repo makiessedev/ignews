@@ -2,6 +2,7 @@ import { NextAuthOptions } from "next-auth";
 import NextAuth from "next-auth/next";
 import Github from "next-auth/providers/github";
 import { query as q } from 'faunadb'
+import { fauna } from "@/app/services/fauna";
 
 const nextAuthOptions: NextAuthOptions = ({
   providers: [
@@ -11,9 +12,20 @@ const nextAuthOptions: NextAuthOptions = ({
     })
   ],
   callbacks: {
-    async signIn({ user, account, profile, email, credentials }) {
+    async signIn({ user, account, profile, credentials }) {
+      const { email } = user
 
-
+      try {
+        await fauna.query(
+          q.Create(
+            q.Collection('users'),
+            { data: { email } }
+          )
+        )
+        return true
+      } catch {
+        return false
+      }
 
       return true
     },
